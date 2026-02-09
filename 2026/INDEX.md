@@ -3,11 +3,21 @@
 This index provides a high-level overview of incidents
 documented during the year.
 
+Rule of thumb:
+
+Update it once every 2–4 weeks
+Or when you feel like "there are too many files now"
+
+With INDEX.md:
+1.Open 2026/INDEX.md
+2.Scan category
+3.Click the file
+4.Done
 ---
 
-## Linux
-- 2026-02-10 - Exploring and Setting up KeePassXC
-- 2026-02-11 - Setting up Springboot + JasperReports Server
+## ORDS / APEX
+- 2026-02-14 — [ORDS service fails after Windows patch](2026-02-14__ords__service-fails-after-windows-patch.md)
 
-## Category2 
+## Linux
+- 2026-02-20 — [High IO wait during backup](2026-02-20__linux__high-io-wait.md)
 - 
