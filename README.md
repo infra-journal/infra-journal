@@ -1,4 +1,10 @@
 ## Hi there 👋
+# Infrastructure Journal
+This repository contains my personal notes from
+working on Linux and Oracle-based systems.
+
+Entries are written as postmortems:
+what broke, what was checked, and what fixed it.
 
 <!--
 **infra-journal/infra-journal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
