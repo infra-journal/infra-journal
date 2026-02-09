@@ -5,6 +5,7 @@ working on Linux and Oracle-based systems.
 
 Entries are written as postmortems:
 what broke, what was checked, and what fixed it.
+Also about setting up , installing and configuring softwares and systems.
 
 <!--
 **infra-journal/infra-journal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
