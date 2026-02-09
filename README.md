@@ -1,4 +1,3 @@
-## Hi there 👋
 # Infrastructure Journal
 This repository contains my personal notes from
 working on Linux and Oracle-based systems.
