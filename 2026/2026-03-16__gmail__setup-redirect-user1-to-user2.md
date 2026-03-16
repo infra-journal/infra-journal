@@ -48,7 +48,7 @@ Scroll to **Content Compliance** and click **Configure** or **Add Another Rule**
 4. For multiple senders, use a **regex** pattern in the Content field:
 
    ```regex
-   ^(sender1@edumet\.com|sender2@other\.com|sender3@example\.com)$
+   ^(sender1@domain\.com|sender2@other\.com|sender3@example\.com)$
    ```
    ```regex(in case you want to add domains instead of Individual emails)
    ^(?i).+@(domain1\.com|domain2\.com|domain3\.com)$ 
