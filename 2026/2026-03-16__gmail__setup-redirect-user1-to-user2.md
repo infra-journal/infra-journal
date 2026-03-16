@@ -50,7 +50,9 @@ Scroll to **Content Compliance** and click **Configure** or **Add Another Rule**
    ```regex
    ^(sender1@edumet\.com|sender2@other\.com|sender3@example\.com)$
    ```
-
+   ```regex(in case you want to add domains instead of Individual emails)
+   ^(?i).+@(domain1\.com|domain2\.com|domain3\.com)$ 
+   ```
    > Add as many senders as needed using the `|` (pipe) separator.
 
 ### 5. Configure the Redirection
