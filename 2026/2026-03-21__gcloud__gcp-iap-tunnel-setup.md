@@ -213,8 +213,6 @@ The IAM roles and IAP API are already in place from the RDP setup. You only need
 4. Add the tag: `allow-ssh-iap`
 5. Click **Save**
 
-> If the VM already has the `allow-rdp-iap` tag from the RDP setup, just add `allow-ssh-iap` alongside it — both tags can coexist on the same VM.
-
 ---
 
 ## Step 3 — Connect via SSH using IAP Desktop
