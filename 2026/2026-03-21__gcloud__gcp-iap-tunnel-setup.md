@@ -167,4 +167,97 @@ localhost:13389
 
 ---
 
+# GCP IAP Tunnel Setup — SSH Access to VM (Port 22)
+
+> **Note:** This guide assumes you have already completed the base IAP setup for RDP (IAM roles assigned, IAP API enabled). If not, complete that first.
+
+---
+
+## What Changes for SSH
+
+The IAM roles and IAP API are already in place from the RDP setup. You only need to:
+
+1. Create a new firewall rule for port 22
+2. Add a network tag to the VM
+3. Use **IAP Desktop** to connect
+
+---
+
+## Step 1 — Create the Firewall Rule for SSH
+
+1. Go to **VPC Network → Firewall**
+2. Click **+ Create Firewall Rule**
+3. Fill in the fields as follows:
+
+| Field | Value |
+|---|---|
+| Name | `allow-ssh-iap` |
+| Network | `default` (or your VPC name) |
+| Direction of traffic | Ingress |
+| Action on match | Allow |
+| Targets | Specified target tags |
+| Target tags | `allow-ssh-iap` |
+| Source filter | IPv4 ranges |
+| Source IP ranges | `35.235.240.0/20` |
+| Protocols and ports | TCP → `22` |
+
+4. Click **Create**
+
+---
+
+## Step 2 — Add the Network Tag to Your VM
+
+1. Go to **Compute Engine → VM Instances**
+2. Click your VM name → click **Edit** (pencil icon at the top)
+3. Scroll down to **Network tags**
+4. Add the tag: `allow-ssh-iap`
+5. Click **Save**
+
+> If the VM already has the `allow-rdp-iap` tag from the RDP setup, just add `allow-ssh-iap` alongside it — both tags can coexist on the same VM.
+
+---
+
+## Step 3 — Connect via SSH using IAP Desktop
+
+**IAP Desktop** is the recommended way to connect via SSH through IAP. It handles the tunnel automatically with no commands needed.
+
+### Download
+
+- Official page: [github.com/GoogleCloudPlatform/iap-desktop](https://github.com/GoogleCloudPlatform/iap-desktop/releases)
+- Download the latest `.msi` installer from the Releases page
+
+### Connect
+
+1. Install and launch **IAP Desktop**
+2. Sign in with your Google account (`your@gmail.com`)
+3. Your GCP projects and VM instances will appear automatically
+4. Right-click your Linux VM → click **Connect**
+5. IAP Desktop opens the IAP tunnel and SSH session automatically
+
+> IAP Desktop picks a free local port on its own and manages the entire tunnel lifecycle — no terminal commands or manual port management required.
+
+---
+
+## Firewall Rules Summary
+
+Both RDP and SSH use the same IAP source IP range. The only difference is the destination port and tag name.
+
+| Protocol | VM Port | IAP Source Range | Firewall Tag |
+|---|---|---|---|
+| RDP | `3389` | `35.235.240.0/20` | `allow-rdp-iap` |
+| SSH | `22` | `35.235.240.0/20` | `allow-ssh-iap` |
+
+---
+
+## Troubleshooting
+
+| Issue | Fix |
+|---|---|
+| IAP Desktop shows no instances | Ensure `Compute Viewer` role is assigned to your Gmail in IAM |
+| SSH connection refused | Check the firewall rule has the correct tag and the VM has `allow-ssh-iap` tag assigned |
+| Permission denied (publickey) | Ensure your SSH key is added to the VM's `~/.ssh/authorized_keys` or use OS Login |
+| IAP Desktop can't authenticate | Re-sign in via **File → Sign in** with the Gmail that has IAP roles assigned |
+
+---
+
 *Last updated: March 2026*
