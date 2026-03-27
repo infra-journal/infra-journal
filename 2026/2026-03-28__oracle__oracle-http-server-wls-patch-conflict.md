@@ -2,7 +2,7 @@
 
 ## Applies To
 
-- **Product:** Oracle WebLogic Server 12.2.1.4.0
+- **Product:** Oracle WebLogic Server 12.2.1.4.0 and Oracle Http server 12.2.1.4
 - **Component:** OPatch / Oracle Home Patching
 - **Platform:** All platforms (Windows / Linux)
 
@@ -138,7 +138,7 @@ When both patches are passed to `opatch napply` in a single command, OPatch reso
 
 | Item | Value |
 |---|---|
-| Product Version | WebLogic 12.2.1.4.0 |
+| Product Version | WebLogic 12.2.1.4.0 | Oracle Http Server 12.2.1.4
 | Installed Patch | 37710654 — FMW Thirdparty Bundle 12.2.1.4.250314 |
 | Incoming Patch | 38792523 — WLS PSU 12.2.1.4.251223 |
 | Resolution Patch | 38759265 — FMW Thirdparty Bundle (latest) |
