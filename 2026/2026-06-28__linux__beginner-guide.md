@@ -136,32 +136,69 @@ Learning these shortcuts will increase your speed and workflow inside the comman
 
 ------------------------------
 ## 9. Comprehensive Hands-On Practice Scenario
+
 Open your Linux terminal window and execute this structured command sequence from top to bottom to put your new knowledge into practice:
+
+**Step 1:** Print your current working path and see what files exist here.
 ```bash
-## Step 1: Print your current working path and see what files exist here
 pwd
-ls -la [5] 
-## Step 2: Ensure you are safely inside your primary user home folder
-cd ~
-## Step 3: Create a nested folder path cleanly using the -p flag
-mkdir -p linux_mastery/sandbox
-## Step 4: Move inside your freshly created workspace directory
-cd linux_mastery/sandbox
-## Step 5: Double-check your current folder path has updated successfully
-pwd
-## Step 6: Create an empty text file intended to be a bash script
-touch sample_script.sh
-## Step 7: Inject a basic line of executable text into your script file
-echo 'echo "Hello from Linux!"' > sample_script.sh
-## Step 8: Read out the text file contents to verify it saved perfectly
-cat sample_script.sh
-## Step 9: Check the current permission bits. Notice it lacks execution flags.
-ls -l sample_script.sh
-## Step 10: Upgrade the permissions to make the script file executable
-chmod +x sample_script.sh
-## Step 11: Execute your script directly out of the current folder path
-./sample_script.sh
-## Step 12: Launch the interactive live task manager to view system performance
-top
-## (Note: Press the 'q' key on your keyboard to close the live monitor screen)
 ```
+```bash
+ls -la
+```
+
+**Step 2:** Ensure you are safely inside your primary user home folder.
+```bash
+cd ~
+```
+
+**Step 3:** Create a nested folder path cleanly using the `-p` flag.
+```bash
+mkdir -p linux_mastery/sandbox
+```
+
+**Step 4:** Move inside your freshly created workspace directory.
+```bash
+cd linux_mastery/sandbox
+```
+
+**Step 5:** Double-check your current folder path has updated successfully.
+```bash
+pwd
+```
+
+**Step 6:** Create an empty text file intended to be a bash script.
+```bash
+touch sample_script.sh
+```
+
+**Step 7:** Inject a basic line of executable text into your script file.
+```bash
+echo 'echo "Hello from Linux!"' > sample_script.sh
+```
+
+**Step 8:** Read out the text file contents to verify it saved perfectly.
+```bash
+cat sample_script.sh
+```
+
+**Step 9:** Check the current permission bits to see its restriction status.
+```bash
+ls -l sample_script.sh
+```
+
+**Step 10:** Upgrade the permissions to make the script file executable.
+```bash
+chmod +x sample_script.sh
+```
+
+**Step 11:** Execute your script directly out of the current folder path.
+```bash
+./sample_script.sh
+```
+
+**Step 12:** Launch the interactive live task manager to view system performance (Press `q` to exit).
+```bash
+top
+```
+
