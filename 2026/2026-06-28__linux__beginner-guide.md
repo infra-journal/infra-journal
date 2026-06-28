@@ -137,7 +137,7 @@ Learning these shortcuts will increase your speed and workflow inside the comman
 ------------------------------
 ## 9. Comprehensive Hands-On Practice Scenario
 Open your Linux terminal window and execute this structured command sequence from top to bottom to put your new knowledge into practice:
-%%MAGIT_PARSER_PROTECT%%```bash
+```bash
 ## Step 1: Print your current working path and see what files exist here
 pwd
 ls -la [5] 
@@ -164,4 +164,4 @@ chmod +x sample_script.sh
 ## Step 12: Launch the interactive live task manager to view system performance
 top
 ## (Note: Press the 'q' key on your keyboard to close the live monitor screen)
-%%MAGIT_PARSER_PROTECT%%```
+```
